@@ -36,10 +36,8 @@ public class LogService {
 
             int count =0;
             int total=0;
-            if(count ==0) {
 
-            }
-            if(false){
+            if(count==60){
               double avgRestimeperMin = aggregateService.avgRestimeperMin(total,count);
                count=0;
             }else {
