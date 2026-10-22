@@ -6,12 +6,11 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import java.time.Instant;
 import java.time.LocalDateTime;
 
-@Document(indexName = "logs")
+
 public class Log {
 
 
-    @Id
-    private String id;
+
     private Instant timestamp;
     private String level;
     private Service service;
@@ -19,13 +18,7 @@ public class Log {
     private Integer statusCode;
 
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public Instant getTimestamp() {
         return timestamp;

@@ -34,9 +34,7 @@ public class LogService {
             Log log = convertToLog(logReqDto);
         System.out.println(log);
 
-            int count =0;
-            int total=0;
-
+            
             if(count==60){
               double avgRestimeperMin = aggregateService.avgRestimeperMin(total,count);
                count=0;
@@ -49,6 +47,12 @@ public class LogService {
 
 
     }
+    
+ 
+    public  void minAggregater() {
+    	
+    	
+    }
 
     public void saveLogs(List<LogReqDto> logs) {
         for(LogReqDto logReqDto : logs){
@@ -59,8 +63,7 @@ public class LogService {
 
     private Log convertToLog(LogReqDto logReqDto){
         Log log = new Log();
-        log.setId(logReqDto.getId());
-        log.setTimestamp(logReqDto.getTimestamp());
+             log.setTimestamp(logReqDto.getTimestamp());
         log.setResponseTimeMs(logReqDto.getResponseTimeMs());
         log.setLevel(logReqDto.getLevel());
         Service service = serviceService.saveService(logReqDto.getService());
