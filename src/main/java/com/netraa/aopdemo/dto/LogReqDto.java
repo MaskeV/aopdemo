@@ -4,21 +4,13 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class LogReqDto {
-    private String id;
+
     private Instant timestamp;
     private String level;
     private String service;
     private Integer responseTimeMs;
     private Integer statusCode;
 
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getLevel() {
         return level;

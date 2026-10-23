@@ -1,17 +1,10 @@
 package com.netraa.aopdemo.entity;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
-
 import java.time.Instant;
-import java.time.LocalDateTime;
 
-@Document(indexName = "logs")
 public class Log {
 
 
-    @Id
-    private String id;
     private Instant timestamp;
     private String level;
     private Service service;
@@ -19,13 +12,6 @@ public class Log {
     private Integer statusCode;
 
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public Instant getTimestamp() {
         return timestamp;
@@ -70,7 +56,6 @@ public class Log {
     @Override
     public String toString() {
         return "Log{" +
-                "id='" + id + '\'' +
                 ", timestamp=" + timestamp +
                 ", level='" + level + '\'' +
                 ", service=" + service +
@@ -78,4 +63,6 @@ public class Log {
                 ", statusCode=" + statusCode +
                 '}';
     }
+
+
 }
